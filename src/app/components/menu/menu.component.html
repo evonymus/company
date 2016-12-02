@@ -1,0 +1,8 @@
+<div class="nav" id="menu">
+  <ul class="nav">
+    <li class="nav-item" *ngFor="let item of MenuItems"
+        (onMenuItemSelected)="onMenuItemSelected(item)"
+        (click)="onClick(item)"
+    >{{item.name}}</li>
+  </ul>
+</div>

@@ -1,3 +1,12 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+  <div class="row">
+      <div class="text-info "><h2>Header</h2></div>
+  </div>
+  <div class="row">
+      <div class="col-lg-4 bg-info">
+        menu
+        <app-menu [menuItems]="menuItems" (onMenuItemSelected)="onMenuItemSelected($event)"></app-menu>
+      </div>
+      <div class="col-lg-8"> content</div>
+  </div>
+</div>
