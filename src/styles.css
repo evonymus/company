@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+label.normal {width: 100px}
+input.text-normal {width: 300px}
+div.info {
+  padding-top: 20px;
+  padding-bottom:20px;
+  padding-left:10px;
+  padding-right: 10px;
+  background-color:#f4f8ff;
+}
+
+li:hover {
+  color:#752508;
+  background-color:#f7eac5;
+  }
+
+.bg-component {
+  background-color:#f4f8ff;
+}

@@ -1,0 +1,13 @@
+<div id="company-content">
+  <div class="row">
+    <div class="col-lg-4">
+      <app-company-list [companyList]="companyList"
+          (onCompanySelected)="onCompanySelected($event)"
+      ></app-company-list>
+    </div>
+      <div class="col-lg-8" *ngIf="selectedCompany">
+        <app-company-info [company]="selectedCompany" ></app-company-info>
+        <app-address-info [address]="selectedCompany.address" ></app-address-info>
+      </div>
+  </div>
+</div>

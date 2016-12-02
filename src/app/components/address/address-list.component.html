@@ -1,0 +1,10 @@
+<div id="addressList">
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let item of addressList"
+        (onAddressSelected)="onAddressSelected(item)"
+        (click)="onClick(item)"
+      >{{item.city}} {{item.street}} {{item.no}}
+    </li>
+
+  </ul>
+</div>

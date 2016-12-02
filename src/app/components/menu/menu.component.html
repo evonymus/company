@@ -1,0 +1,8 @@
+<div class="nav" id="menu">
+  <ul >
+    <li class="nav-item bg-component" *ngFor="let item of menuItems"
+        (onMenuItemSelected)="onMenuItemSelected(item)"
+        (click)="onClick(item)"
+    >{{item.name}}</li>
+  </ul>
+</div>

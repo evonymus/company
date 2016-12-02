@@ -1,0 +1,11 @@
+<div id="company-list" >
+  <ul class="list-group">
+    <li class="list-group-item bg-component"
+        *ngFor="let company of companyList"
+        (onCompanySelected)="onCompanySelected(company)"
+        (click)="onClick(company)"
+        [class.active]="isCompanySelected(company)"
+        > {{company.name}}
+    </li>
+  </ul>
+</div>
