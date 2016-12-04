@@ -10,4 +10,8 @@ export class CompanyItem {
     Object.assign(this, values);
   }
 
+  static getEmptyCompany() {
+    return new CompanyItem({name:"", nameLong:"", nip:"", address:AddressItem.getEmptyAddress()});
+  }
+
 }

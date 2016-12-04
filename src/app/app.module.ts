@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './components/menu/menu.component';
@@ -9,6 +9,7 @@ import { AddressInfoComponent } from './components/address/address-info.componen
 import { CompanyListComponent } from './components/company/company-list.component';
 import { CompanyInfoComponent } from './components/company/company-info.component';
 import { CompanyContentComponent } from './components/company/company-content.component';
+import { CompanyFormComponent } from './components/company/company-form.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +19,13 @@ import { CompanyContentComponent } from './components/company/company-content.co
     AddressInfoComponent,
     CompanyListComponent,
     CompanyInfoComponent,
-    CompanyContentComponent
+    CompanyContentComponent,
+    CompanyFormComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
   ],
   providers: [],

@@ -9,13 +9,32 @@ div.info {
   padding-left:10px;
   padding-right: 10px;
   background-color:#f4f8ff;
+  border-style: solid;
+  border-color: #aaaaf4;
+  border-width: 1px;
 }
 
 li:hover {
   color:#752508;
-  background-color:#f7eac5;
+  background-color:#f4fff6;
   }
 
 .bg-component {
   background-color:#f4f8ff;
+}
+
+.bg-form {
+  background-color:#f4fff6;
+}
+
+.input-form {
+  margin-top: 10px;
+  background-color:#f4fff6;
+  border-style: solid;
+  border-color: #4ab94a;
+  border-width: 1px;
+  padding-top: 20px;
+  padding-bottom:20px;
+  padding-left:10px;
+  padding-right: 10px;
 }

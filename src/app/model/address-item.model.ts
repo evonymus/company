@@ -11,4 +11,7 @@ export class AddressItem {
     Object.assign(this, values);
   }
 
+  static getEmptyAddress() {
+    return new AddressItem({street:"", no:"", house:"", zip:"", city:"", country:""});
+  }
 }
