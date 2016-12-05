@@ -10,6 +10,8 @@ import { CompanyListComponent } from './components/company/company-list.componen
 import { CompanyInfoComponent } from './components/company/company-info.component';
 import { CompanyContentComponent } from './components/company/company-content.component';
 import { CompanyFormComponent } from './components/company/company-form.component';
+import { RoeTableComponent } from './components/roe/roe-table.component';
+import { RoeContentComponent } from './components/roe/roe-content.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { CompanyFormComponent } from './components/company/company-form.componen
     CompanyInfoComponent,
     CompanyContentComponent,
     CompanyFormComponent,
+    RoeTableComponent,
+    RoeContentComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,15 @@
+<div class="text-info" *ngIf="loading">loading...</div>
+<div id="roe-table" class="bg-component" *ngIf="nbp">
+  <h3 class="text-info">
+    Tabela {{nbp.table}} nr {{nbp.no}} z dnia: {{nbp.effectiveDate}}
+  </h3>
+  <table class="table table-stripped">
+    <tr>
+      <th>Waluta</th>
+      <th>Kod</th>
+      <th>Kurs</th>
+    </tr>
+    <tr *ngFor="let roe of nbp.rates"><td>{{roe.currency}}</td><td>{{roe.code}}</td><td>{{rode.mid}}</td></tr>
+  </table>
+
+</div>
