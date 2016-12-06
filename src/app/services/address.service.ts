@@ -4,7 +4,11 @@ import { AddressItem } from '../model/address-item.model';
 @Injectable()
 export class AddressService {
 
+<<<<<<< HEAD
   getAddressList(): AddressItem[] {
+=======
+  getAddressList(): Address[] {
+>>>>>>> c371eb2786f7b4387e0a958b7bdeadaa774f1760
     return [
       new AddressItem({street:"Zielona", no:"42", house:"11", zip:"02-921", city:"Warszawa", country:"Polska"})
       , new AddressItem({street:"Dzika", no:"1", house:"31", zip:"12-921", city:"Olsztyn", country:"Polska"})

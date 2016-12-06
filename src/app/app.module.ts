@@ -17,7 +17,6 @@ import { RoeContentComponent } from './components/roe/roe-content.component';
   declarations: [
     AppComponent,
     MenuComponent,
-    AddressListComponent,
     AddressInfoComponent,
     CompanyListComponent,
     CompanyInfoComponent,
@@ -25,6 +24,7 @@ import { RoeContentComponent } from './components/roe/roe-content.component';
     CompanyFormComponent,
     RoeTableComponent,
     RoeContentComponent,
+    AddressListComponent
   ],
   imports: [
     BrowserModule,
