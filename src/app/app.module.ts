@@ -12,6 +12,8 @@ import { CompanyContentComponent } from './components/company/company-content.co
 import { CompanyFormComponent } from './components/company/company-form.component';
 import { RoeTableComponent } from './components/roe/roe-table.component';
 import { RoeContentComponent } from './components/roe/roe-content.component';
+import {routing} from './routes/main.routes';
+
 
 @NgModule({
   declarations: [
@@ -24,13 +26,14 @@ import { RoeContentComponent } from './components/roe/roe-content.component';
     CompanyFormComponent,
     RoeTableComponent,
     RoeContentComponent,
-    AddressListComponent
+    AddressListComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]

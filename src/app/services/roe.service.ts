@@ -8,13 +8,13 @@ export class RoeService {
 
   constructor(public http: Http) {
     console.log("Roe Service created");
-    this.http.request('http://api.nbp.pl/api/exchangerates/tables/A/?format=json').subscribe((res: Response) => {
-      this.data =<NbpRoeItem[]> res.json();
-    });
-      console.log(this.data);
   }
 
   getRoeList() : NbpRoeItem[] {
+    this.http.request('http://api.nbp.pl/api/exchangerates/tables/A/?format=json').subscribe((res: Response) => {
+      this.data =<NbpRoeItem[]> res.json();
+    });
+    console.log("getRoeList");
      return this.data;
   }
 

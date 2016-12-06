@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
+import {RouterModule, Routes } from '@angular/router';
 import {MenuItem} from './model/menu-item.model';
 import { MenuService } from './services/menu.service';
+
 
 @Component({
   selector: 'app-root',
