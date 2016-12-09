@@ -1,3 +1,18 @@
-<div id="roe-content" class="bg-component">
-  <app-roe-table [nbp]="nbp"></app-roe-table>
+<div id="roe-content" class="container">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card info">
+          <label for="roe-date">Date</label>
+          <input id="roe-date" class="text-center" [(ngModel)]="roeDate" (ngModelChange) = "roeDateChanged($event)"
+          required
+          ng2-datetime-picker
+          date-only="true">
+      </div><br/>
+      <roe-menu></roe-menu>
+
+    </div>
+    <div class="col-lg-8">
+      <app-roe-table [nbp]="nbp"></app-roe-table>
+    </div>
+  </div>
 </div>

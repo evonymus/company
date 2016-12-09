@@ -15,7 +15,7 @@ export class MenuComponent{
   onMenuItemSelected: EventEmitter<MenuItem>;
 
   constructor() {
-    this.onMenuItemSelected = new EventEmitter();
+    this.onMenuItemSelected = new EventEmitter<MenuItem>();
   }
 
   onClick(menuItem: MenuItem) {

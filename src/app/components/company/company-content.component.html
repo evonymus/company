@@ -8,6 +8,8 @@
       <div class="col-lg-8" *ngIf="selectedCompany">
         <app-company-info [company]="selectedCompany" ></app-company-info>
         <app-address-info [address]="selectedCompany.address" ></app-address-info>
+        <app-company-form [company]="selectedCompany"></app-company-form>
       </div>
+      <router-outlet></router-outlet>
     </div>
 </div>

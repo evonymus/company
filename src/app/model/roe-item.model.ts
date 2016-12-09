@@ -7,4 +7,5 @@ export class RoeItem {
   constructor(values: Object={}) {
     Object.assign(this, values);
   }
+
 }

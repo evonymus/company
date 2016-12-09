@@ -1,21 +1,32 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { NbpRoeItem } from '../model/nbp-roe-item.model';
+import { Observable } from 'rxjs/Rx';
+import 'rxjs/Rx';
 
 @Injectable()
 export class RoeService {
-  data: NbpRoeItem[];
+  // url:string='https://api.github.com/users';
+  url:string='http://api.nbp.pl/api/exchangerates/tables/A/';
+  format:string='?format=json';
 
-  constructor(public http: Http) {
-    console.log("Roe Service created");
+  constructor(private http: Http) {
   }
 
-  getRoeList() : NbpRoeItem[] {
-    this.http.request('http://api.nbp.pl/api/exchangerates/tables/A/?format=json').subscribe((res: Response) => {
-      this.data =<NbpRoeItem[]> res.json();
-    });
-    console.log("getRoeList");
-     return this.data;
+  getRoeList()  {
+    return this.http.get(this.url + this.format)
+    .flatMap((response: Response) => response.json());
+  }
+
+  getRoeListForDate(date:Date)  {
+    return this.http.get(this.url + date + '/' +  this.format)
+    .flatMap((response: Response) => response.json())
+  }
+
+  private handleError(error: Response) {
+    console.log("SERVER ERROR OCCURED");
+    console.error(error);
+    return Observable.throw(error.json().error || 'server error');
   }
 
 

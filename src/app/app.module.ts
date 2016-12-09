@@ -13,6 +13,11 @@ import { CompanyFormComponent } from './components/company/company-form.componen
 import { RoeTableComponent } from './components/roe/roe-table.component';
 import { RoeContentComponent } from './components/roe/roe-content.component';
 import {routing} from './routes/main.routes';
+import { CompanyMenuComponent } from './components/company/company-menu.component';
+// date time picker module
+import { Ng2DatetimePickerModule } from 'ng2-datetime-picker';
+import { RoeMenuComponent } from './components/roe/roe-menu.component';
+import { IpInfoComponent } from './components/info/ip-info.component';
 
 
 @NgModule({
@@ -27,13 +32,17 @@ import {routing} from './routes/main.routes';
     RoeTableComponent,
     RoeContentComponent,
     AddressListComponent,
+    CompanyMenuComponent,
+    RoeMenuComponent,
+    IpInfoComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
-    routing
+    routing,
+    Ng2DatetimePickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

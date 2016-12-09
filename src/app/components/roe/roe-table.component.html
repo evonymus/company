@@ -1,15 +1,15 @@
 <div class="text-info" *ngIf="loading">loading...</div>
-<div id="roe-table" class="bg-component" *ngIf="nbp">
-  <h3 class="text-info">
+<div id="roe-table"  *ngIf="nbp" class="card info">
+  <h4 class="card-header">
     Tabela {{nbp.table}} nr {{nbp.no}} z dnia: {{nbp.effectiveDate}}
-  </h3>
-  <table class="table table-stripped">
-    <tr>
-      <th>Waluta</th>
-      <th>Kod</th>
-      <th>Kurs</th>
+  </h4><br/>
+  <table class="table table-striped table-bordered table-sm">
+    <tr class="bg-info">
+      <th>Currency</th>
+      <th>Code</th>
+      <th>ROE</th>
     </tr>
-    <tr *ngFor="let roe of nbp.rates"><td>{{roe.currency}}</td><td>{{roe.code}}</td><td>{{rode.mid}}</td></tr>
+    <tr *ngFor="let roe of nbp.rates"><td>{{roe.currency}}</td><td>{{roe.code}}</td><td>{{roe.mid}}</td></tr>
   </table>
 
 </div>

@@ -14,7 +14,7 @@ export class AddressListComponent {
   onAddressSelected : EventEmitter<AddressItem>;
 
   constructor() {
-    this.onAddressSelected = new EventEmitter();
+    this.onAddressSelected = new EventEmitter<AddressItem>();
   }
 
   onClick(addressItem: AddressItem) :void {

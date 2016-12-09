@@ -14,7 +14,7 @@ export class CompanyListComponent {
   onCompanySelected: EventEmitter<CompanyItem>;
 
   constructor() {
-    this.onCompanySelected = new EventEmitter();
+    this.onCompanySelected = new EventEmitter<CompanyItem>();
   }
 
   onClick(companyItem: CompanyItem) {

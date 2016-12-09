@@ -1,0 +1,11 @@
+#header_h2 {
+  text-align:center;
+  padding-left:100px;
+  padding-top: 30px;
+}
+#header_img {display: inline;
+  float:right;
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
