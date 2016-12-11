@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {IpInfoModel} from '../../model/ip-info.model';
+import {WeatherModel} from '../../model/weather.model';
 import { InfoWebService } from "../../services/info-web.service";
 import { GeonamesService } from "../../services/geonames.service";
 
@@ -11,6 +12,7 @@ import { GeonamesService } from "../../services/geonames.service";
 })
 export class IpInfoComponent implements OnInit  {
   ipInfo: IpInfoModel;
+  weather: WeatherModel = new WeatherModel();
 
   constructor(private infoWebService: InfoWebService
     , private geo: GeonamesService) {
@@ -20,7 +22,7 @@ export class IpInfoComponent implements OnInit  {
   ngOnInit() {
     this.infoWebService.getIpInfo()
     .subscribe(
-      (data:IpInfoModel) => this.getIpData(data)
+      (data:IpInfoModel) => this.getIpData(data),
       err => this.ipInfo = new IpInfoModel()
     );
 
@@ -35,7 +37,9 @@ export class IpInfoComponent implements OnInit  {
     console.log(this.ipInfo.latitude);
     this.geo.getGeoWeather(this.ipInfo.latitude, this.ipInfo.longitude)
     .subscribe(
-      (data:any) => console.log(data)
-    )
+      (data:any) => this.weather=data,
+      err => this.weather = new WeatherModel({message:err})
+    );
+
   }
 }

@@ -12,4 +12,5 @@ export const MAIN_ROUTES: Routes = [
   {path: 'banking', component: RoeContentComponent }
 ];
 
-export const routing: ModuleWithProviders = RouterModule.forRoot(MAIN_ROUTES);
+export const routing: ModuleWithProviders = RouterModule.forRoot(MAIN_ROUTES, {useHash:true});
+// export const routing: ModuleWithProviders = RouterModule.forRoot(MAIN_ROUTES});

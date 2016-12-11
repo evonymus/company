@@ -23,6 +23,7 @@ import { HomeComponent } from './components/home/home.component';
 //google maps module
 import { AgmCoreModule } from 'angular2-google-maps/core';
 import { MapComponent } from './components/map/map.component';
+import { WeatherComponent } from './components/weather/weather.component';
 
 
 @NgModule({
@@ -43,6 +44,7 @@ import { MapComponent } from './components/map/map.component';
     HeaderComponent,
     HomeComponent,
     MapComponent,
+    WeatherComponent,
   ],
   imports: [
     BrowserModule,

@@ -12,8 +12,10 @@
           <p><strong>Longitude:</strong> {{ipInfo.longitude}}</p>
         </div>
       </div>
-      <app-map [lat]="ipInfo.latitude" [lng]="ipInfo.longitude"></app-map>
+          <app-map [lat]="ipInfo.latitude" [lng]="ipInfo.longitude"></app-map>
         </div>
-    <div class="col-lg-8"></div>
+    <div class="col-lg-8">
+      <app-weather [weather]="weather"></app-weather>
+    </div>
   </div>
 </div>
