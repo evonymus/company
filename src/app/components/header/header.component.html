@@ -1,18 +1,23 @@
+<div class="container">
+  <div class="row">
   <div id="header" class="col-lg-12 header">
       <img id="header_img" src="resources/images/evonymus.png "/>
       <h2 id="header_h2">{{currentMenu}}</h2>
   </div>
- <div id="header-menu" class="row">
-   <ul id="header-ul" class="nav nav-tabs">
-     <li class="nav-item">
-        <a [routerLink]="['']" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item">
-        <a [routerLink]="['/banking']" class="nav-link">Banking</a>
-      </li>
-      <li class="nav-item">
-        <a [routerLink]="['/company']" class="nav-link">Company</a>
-      </li>
-    </ul>
 </div>
-
+   <div id="header-menu" class="row">
+   <nav class="navbar navbar-light bg-faded">
+     <ul id="header-ul" class="nav navbar-nav" (click)="onClick($event)">
+       <li class="nav-item">
+          <a [routerLink]="['']" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/banking']" class="nav-link">Banking</a>
+        </li>
+        <li class="nav-item">
+          <a [routerLink]="['/company']" class="nav-link">Company</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>

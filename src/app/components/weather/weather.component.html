@@ -1,0 +1,22 @@
+<div class="card info">
+  <h3 class="card-header">Weather</h3>
+  <p>
+    <strong>Temperature:</strong> {{weather.weatherObservation.temperature}} C
+  </p>
+  <p>
+    <strong>Humidity:</strong> {{weather.weatherObservation.humidity}} %
+  </p>
+  <p>
+    <strong>Pressure:</strong> {{weather.weatherObservation.hectoPascAltimeter}} hPa
+  </p>
+  <p>
+    <strong>Wind Speed:</strong> {{weather.weatherObservation.windSpeed}} km/h
+  </p>
+  <p>
+    <strong>Wind Direction:</strong> {{weather.weatherObservation.windDirection}}
+  </p>
+  <p>
+    <strong>ICAO:</strong> {{weather.weatherObservation.ICAO}}
+  </p>
+  <p *ngIf="weather.message" class="text-danger"><strong>Message:</strong>{{weather.message}}</p>
+</div>

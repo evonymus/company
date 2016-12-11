@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 const MENU_ITEMS: string[]=['Home', 'Banking', 'Company'];
 
@@ -17,8 +17,11 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-  onClick(text:string) : void {
-    console.log(text);
+  onClick(evt:any) : void {
+    console.log(evt);
+    if(evt.srcElement.outerText) {
+      this.currentMenu = evt.srcElement.outerText;
+    }
   }
 
 }

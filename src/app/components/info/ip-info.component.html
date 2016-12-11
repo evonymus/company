@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-lg-4">
       <div class="card info" id="ip-info">
-        <h3 class="card-header">IP Info</h3>
+        <h3 class="card-header">IP Info </h3>
         <div id="ip-content" >
           <p><strong>IP:</strong> {{ipInfo.ip}}</p>
           <p><strong>Country:</strong> {{ipInfo.country_name}}</p>
@@ -12,8 +12,10 @@
           <p><strong>Longitude:</strong> {{ipInfo.longitude}}</p>
         </div>
       </div>
-      <app-map [lat]="ipInfo.latitude" [lng]="ipInfo.longitude"></app-map>
+          <app-map [lat]="ipInfo.latitude" [lng]="ipInfo.longitude"></app-map>
         </div>
-    <div class="col-lg-8"></div>
+    <div class="col-lg-8">
+      <app-weather [weather]="weather"></app-weather>
+    </div>
   </div>
 </div>
