@@ -27,11 +27,6 @@ export class AppComponent  implements OnInit{
   }
 
   ngOnInit() {
-    this.infoWebService.getIpInfo()
-    .subscribe(
-      // (data:IpInfoModel)=>this.ipInfo = data
-      (data:any)=> console.log(data)
-    );
 
   }
 

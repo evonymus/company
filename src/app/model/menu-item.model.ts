@@ -1,6 +1,6 @@
 export class MenuItem {
   name: string;
-  url : string;
+  loc : string[];
 
   constructor(values: Object = {}) {
     Object.assign(this, values);

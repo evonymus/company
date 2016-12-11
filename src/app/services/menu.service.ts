@@ -9,14 +9,14 @@ export class MenuService {
   }
 
  getMainMenu(): MenuItem[] {
-    return [new MenuItem({name:"Company", url:"company"})
-      , new MenuItem({name:"Product",url:"product"})
-      , new MenuItem({name:"Configuration",url:"configuration"})];
+    return [new MenuItem({name:"home", loc:['']})
+      , new MenuItem({name:"Banking",loc:['/banking']})
+      , new MenuItem({name:"Company",loc:['/company']})];
  }
   getMenu() : MenuItem[] {
-    return [new MenuItem({name:'ONE', url:'#1'})
-    , new MenuItem({name:'TWO',url:'#2'})
-    , new MenuItem({name:'THREE', url:'#3'})];
+    return [new MenuItem({name:'ONE', loc:'#1'})
+    , new MenuItem({name:'TWO',loc:'#2'})
+    , new MenuItem({name:'THREE', loc:'#3'})];
   }
 
 

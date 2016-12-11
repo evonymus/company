@@ -1,13 +1,8 @@
 <div  id="menu">
   <ul class="nav nav-pills nav-stacked">
-    <!--
     <li class="nav-item bg-component" *ngFor="let item of menuItems"
         (onMenuItemSelected)="onMenuItemSelected(item)"
         (click)="onClick(item)"
-    >{{item.name}}</li>
-    -->
-    <li class="nav-item"><a [routerLink]="['company']">Company</a></li>
-    <li class="nav-item"><a [routerLink]="['company-form']">Company Form</a></li>
-    <li class="nav-item"><a [routerLink]="['roe']">Rate Of Exchange</a></li>
+        ><a class="nav-link" [routerLink]="[''].loc">{{item.name}}</a></li>
   </ul>
 </div>

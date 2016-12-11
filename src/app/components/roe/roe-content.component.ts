@@ -1,23 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { NbpRoeItem } from '../../model/nbp-roe-item.model';
-import { RoeService } from '../../services/roe.service';
+import { NbpService } from '../../services/nbp.service';
 import { Response } from "@angular/http/src/static_response";
 
 @Component({
   selector: 'app-roe-content',
   templateUrl: './roe-content.component.html',
-  providers: [RoeService]
+  providers: [NbpService]
 })
 export class RoeContentComponent implements OnInit {
   nbp: NbpRoeItem = new NbpRoeItem() ;
   loading: boolean;
   roeDate: Date
 
-  constructor( private roeService: RoeService) {
+  constructor( private nbpService: NbpService) {
   }
 
   ngOnInit() {
-    this.roeService.getRoeList()
+    this.nbpService.getRoeList()
       .subscribe(
         (data:NbpRoeItem)=> this.nbp = data,
         err => this.nbp = new NbpRoeItem()
@@ -31,7 +31,7 @@ export class RoeContentComponent implements OnInit {
   }
 
    getRoeForDate(date:Date){
-    this.roeService.getRoeListForDate(date)
+    this.nbpService.getRoeListForDate(date)
       .subscribe(
         (data:NbpRoeItem)=> this.nbp = data,
         err => this.nbp = new NbpRoeItem()
@@ -39,7 +39,7 @@ export class RoeContentComponent implements OnInit {
   }
 
  private getList():void {
-    this.roeService
+    this.nbpService
     .getRoeList()
     .subscribe((data:any)=> this.nbp =data,
       error=>console.log(error),

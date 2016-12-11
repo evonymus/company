@@ -10,7 +10,7 @@ export class InfoWebService {
 
   getIpInfo() {
    return this.http.get(this.ip_url)
-    .flatMap((response: Response)=> response.json());
+    .map((response: Response)=> response.json());
   }
 
 }

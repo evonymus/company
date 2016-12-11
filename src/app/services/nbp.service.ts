@@ -5,8 +5,7 @@ import { Observable } from 'rxjs/Rx';
 import 'rxjs/Rx';
 
 @Injectable()
-export class RoeService {
-  // url:string='https://api.github.com/users';
+export class NbpService {
   url:string='http://api.nbp.pl/api/exchangerates/tables/A/';
   format:string='?format=json';
 

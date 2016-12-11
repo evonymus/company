@@ -18,6 +18,11 @@ import { CompanyMenuComponent } from './components/company/company-menu.componen
 import { Ng2DatetimePickerModule } from 'ng2-datetime-picker';
 import { RoeMenuComponent } from './components/roe/roe-menu.component';
 import { IpInfoComponent } from './components/info/ip-info.component';
+import { HeaderComponent } from './components/header/header.component';
+import { HomeComponent } from './components/home/home.component';
+//google maps module
+import { AgmCoreModule } from 'angular2-google-maps/core';
+import { MapComponent } from './components/map/map.component';
 
 
 @NgModule({
@@ -35,6 +40,9 @@ import { IpInfoComponent } from './components/info/ip-info.component';
     CompanyMenuComponent,
     RoeMenuComponent,
     IpInfoComponent,
+    HeaderComponent,
+    HomeComponent,
+    MapComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,7 +50,10 @@ import { IpInfoComponent } from './components/info/ip-info.component';
     ReactiveFormsModule,
     HttpModule,
     routing,
-    Ng2DatetimePickerModule
+    Ng2DatetimePickerModule,
+    AgmCoreModule.forRoot({
+      apiKey:'AIzaSyByamrdEdqv89Pij5wJFJ-hJtt1M9yHZFI'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

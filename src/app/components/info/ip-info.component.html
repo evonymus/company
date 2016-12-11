@@ -1,7 +1,19 @@
-<div class="card" id="ip-info">
-  <h3 class="card-header">IP Info</h3>
-  <p>IP: {{ipInfo.ip}}</p>
-  <p>Country: {{ipInfo.country_name}}</p>
-  <p>City: {{ipInfo.city}}</p>
-  <p>Time Zone: {{ipInfo.time_zone}}</p>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card info" id="ip-info">
+        <h3 class="card-header">IP Info</h3>
+        <div id="ip-content" >
+          <p><strong>IP:</strong> {{ipInfo.ip}}</p>
+          <p><strong>Country:</strong> {{ipInfo.country_name}}</p>
+          <p><strong>City:</strong> {{ipInfo.city}}</p>
+          <p><strong>Time Zone:</strong> {{ipInfo.time_zone}}</p>
+          <p><strong>Latitude:</strong> {{ipInfo.latitude}}</p>
+          <p><strong>Longitude:</strong> {{ipInfo.longitude}}</p>
+        </div>
+      </div>
+      <app-map [lat]="ipInfo.latitude" [lng]="ipInfo.longitude"></app-map>
+        </div>
+    <div class="col-lg-8"></div>
+  </div>
 </div>

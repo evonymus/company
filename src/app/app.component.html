@@ -1,9 +1,6 @@
 <div class="container">
   <div class="row">
-    <div id="header" class="col-lg-12 header">
-        <img id="header_img" src="resources/images/evonymus.png "/>
-        <h2 id="header_h2">Banking</h2>
-    </div>
+    <app-header></app-header>
   </div>
   <div class="row">
       <!-- <div class="col-lg-4" > -->
@@ -14,7 +11,8 @@
       <!-- </div> -->
       <!-- <router-outlet></router-outlet> -->
       <div class="col-lg-12">
-        <app-roe-content></app-roe-content>
+        <!-- <app-roe-content></app-roe-content> -->
+        <router-outlet></router-outlet>
       </div>
   </div>
 
